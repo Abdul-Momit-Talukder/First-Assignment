@@ -1,9 +1,9 @@
-/* General Reset */
+/* Core Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 /* Navbar */
@@ -11,44 +11,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 8%;
     background: #fff;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #334155;
     font-weight: 500;
-}
-
-/* Buttons & Hovers */
-.btn-primary, .btn-green {
-    background-color: #4c956c;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.btn-primary:hover, .btn-green:hover {
-    background-color: #3a7554;
-    transform: translateY(-2px);
 }
 
 /* Banner */
 .banner {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/banner-bg.jpg');
+    background:  url('assets/hero-bg.png');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,54 +40,211 @@
     color: white;
 }
 
-.highlight { color: #4c956c; }
+.banner-content { max-width: 800px; }
 
-/* Notes Cards Grid */
-.card-container {
+.badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #448c64;
+    font-size: 14px;
+}
+
+.green-text { color: #448c64; }
+
+/* Notes Cards */
+.notes-section { padding: 100px 8%; text-align: center; }
+
+.card-grid {
     display: flex;
-    justify-content: center;
     gap: 20px;
-    padding: 50px 10%;
+    margin-top: 60px;
 }
 
 .card {
-    background: #fdfdfd;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
     flex: 1;
-    border: 1px solid #eee;
+    padding: 40px 20px;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
 }
 
-.icon-box {
-    width: 50px;
-    height: 50px;
-    background: #ff6b6b; /* Similar to Figma red */
+.icon-bg {
+    background: #ff5e5e;
+    width: 60px; height: 60px;
     border-radius: 50%;
-    margin: 0 auto 15px;
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
 }
 
-/* Second Brain Section (Flex Layout) */
-.second-brain {
+/* Solution Section */
+.second-brain { padding: 100px 8%; background: #fff; }
+
+.brain-flex {
     display: flex;
     align-items: center;
-    padding: 80px 10%;
-    gap: 50px;
+    gap: 80px;
 }
 
-.brain-image, .brain-text {
-    flex: 1;
+.brain-img, .brain-text { flex: 1; }
+
+.label { color: #448c64; font-weight: 700; font-size: 14px; }
+
+.feature-list { list-style: none; margin-top: 30px; }
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
-/* Footer Styles */
-footer {
+/* Footer Section */
+.footer {
     background: #001524;
     color: white;
-    padding: 40px 10% 20px;
+    padding: 60px 8% 20px;
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #1e293b;
+    margin: 40px 0 20px;
+}
+/* Outer Section: Lightest off-white background */
+.early-access-outer {
+    background-color: #fdfdfb; 
+    padding: 80px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Inner Container: The rounded box with a slightly different tint */
+.cta-container {
+    background-color: #f9f9f4; /* Matches the 'Early Access Section.png' tint */
+    width: 100%;
+    max-width: 1100px;
+    padding: 80px 40px;
+    border-radius: 20px; /* Precise rounded corners from Figma */
+    text-align: center;
+}
+
+.cta-container h2 {
+    font-size: 42px; /* Large, bold heading */
+    color: #001524;
     margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.cta-desc {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Button Styling: Exactly like the green pill in the image */
+.btn-green-cta {
+    background-color: #448c64;
+    color: white;
+    border: none;
+    padding: 16px 36px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-green-cta:hover {
+    background-color: #367050;
+    transform: translateY(-2px); /* Gentle hover lift */
+}
+
+.btn-green-cta span {
+    font-size: 22px;
+}
+
+.cta-subtext {
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.copyright { text-align: center; opacity: 0.6; font-size: 14px; }
+
+/* Buttons & Hovers */
+.btn-solid, .btn-green-nav {
+    background: #448c64;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-solid:hover, .btn-green-nav:hover {
+    background: #367050;
+    transform: scale(1.03);
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+}
+/* Container for the text and the icons */
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns everything to the right side of the footer */
+    gap: 10px;
+}
+
+.social-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Icons Row */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Spacing between the icons */
+    align-items: center;
+}
+
+/* Uniform Format for Images */
+.social-icons img {
+    width: 24px;  /* Exact width from the footer design */
+    height: 24px; /* Exact height to keep them square */
+    object-fit: contain; /* Ensures the logos don't stretch */
+    filter: brightness(0) invert(1); /* Forces logos to be pure white like the design */
+    transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 0.8;
 }
